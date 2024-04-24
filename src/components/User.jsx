@@ -16,7 +16,7 @@ const User = ({ user, users, setUsers, index }) => {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        fetch(`http://localhost:5000/all-users/${_id}`, {
+        fetch(`https://management-user-server.vercel.app/users/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

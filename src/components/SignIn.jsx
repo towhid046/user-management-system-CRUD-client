@@ -17,7 +17,7 @@ const SignIn = () => {
         const lastLogAt = result.user.metadata.lastSignInTime;
         const user = { email, lastLogAt };
 
-        fetch("http://localhost:5000/customers", {
+        fetch("https://management-user-server.vercel.app/customers", {
           method: "PATCH",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(user),

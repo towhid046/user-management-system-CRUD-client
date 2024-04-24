@@ -16,7 +16,7 @@ const SignUp = () => {
 
     const user = { name, photoUrl, email };
 
-    fetch("http://localhost:5000/customers", {
+    fetch("https://management-user-server.vercel.app/customers", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(user),
